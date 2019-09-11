@@ -1,66 +1,187 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+/* reset css */
+html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+table, caption, tbody, tfoot, thead, tr, th, td,  
+article, aside, canvas, details, embed,  
+figure, figcaption, footer, header, hgroup,  
+menu, nav, output, ruby, section, summary,  
+time, mark, audio, video {  
+margin: 0;  
+padding: 0;  
+border: 0;  
+font-size: 100%;  
+font: inherit;  
+vertical-align: baseline;  
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+/* HTML5 display-role reset */
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    display: block;
 }
 
-/* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+body {
+  margin: 0%; 
+  color: gray; 
+  background: #F7F7F7;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+header{
+  letter-spacing: 3px; 
+  margin-bottom: 15px; 
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 150%;
+  color: #F79C11;  
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+p {
+  font-family: 'courier';
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none; 
+}
+
+button {
+  padding: 10px; 
+  width: 200px;
+}
+
+footer {
+  text-align: center; 
+}
+
+.split_bar {
+  margin: 3%; 
+}
+
+.nav-bar {
+/*   border: 2px solid red; */
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 100%; 
+  background: #2C2C2C; 
+  width: 100%;
+  position: fixed;
+}
+
+.nav-bar a {
+  /* border: 2px solid green; */
+  color: silver; 
+  display: inline-block;
+  vertical-align: top; 
+  padding: 2%;
+  width: 13%;
+  text-align: right; 
+}
+
+.nav-bar a::after {
+  content: ''; 
+  display: block;
+  width: 0;
+  height: 2px;
+  background: silver;
+  transition: width .3s;
+}
+
+.nav-bar a:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+
+.nav-bar img { 
+  /* border: 2px solid red; */
+  margin: 0.5% 0% 0% 10%;
+  padding: 15px;
+  width: 80px;
+  height: 80px; 
+}
+
+.space {
+  padding: 4%;
+}
+
+.intro {
+/*   border: 2px solid red; */
+  margin: 3%; 
+}
+
+.intro_box {
+/*   border: 2px solid blue; */
+  display: inline-block;
+  vertical-align: middle;
+  margin: 1%;
+  width: 47%;
+  text-align: center;
+}
+
+.intro_box img {
+  border-radius: 50%;
+  width: 600px;
+  height: 600px; 
+}
+
+.intro_box.text {
+  text-align: center; 
+  color: #F79C11; 
+  font-family: 'Bangers', cursive;
+  font-size: 500%; 
+}
+
+.intro_box.text p {
+  text-align: center; 
+  color: #F79C11; 
+  font-family: 'Bangers', cursive;
+  font-size: 30%; 
+}
+
+.content_1 {
+/*   border: 2px solid red; */
+  margin: 3%;
+}
+
+.content_1_box {
+/*   border: 2px solid blue; */
+  display: inline-block;
+  padding: 0.5%;
+  width: 47%;
+  min-width: 150px;
+}
+
+.content_img {
+/*   border: 2px solid red; */
+  margin: 3%; 
+}
+
+.content_img img {
+  width: 100%;
+  height: 300px; 
+  
+}
+
+.content_2 {
+/*   border: 2px solid red; */
+  margin: 3%;
+}
+
+.content_2_box {
+/*   border: 2px solid blue; */
+  display: inline-block;
+  padding: 0.5%;
+  width: 31%;
+  min-width: 150px;
+}
+
+.contact {
+  display: block; 
+  margin: 3%; 
+}
